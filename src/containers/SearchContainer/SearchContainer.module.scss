@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+
+.searchContainer {
+  padding :1rem 0rem;
+  display: grid;
+  // grid-template-columns: repeat(7, 1fr) 50px ;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+
+  // @media(max-w)
+}
+
+.btnsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .btn {
+    background-color: $blue-500;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-weight: bold;
+    align-self: end;
+    padding: 8px;
+    cursor: pointer;
+    &:first-of-type {
+      width: 90%;
+    }
+    &.resetBtn {
+      // width: 10%;
+      margin-inline-start: 5px;
+    }
+  }
+}
+
