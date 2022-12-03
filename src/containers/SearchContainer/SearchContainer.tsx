@@ -16,6 +16,7 @@ const SearchContainer: React.FC<SearchContainerProps> = ({
   getOptions,
   getSearch,
 }) => {
+  // eslint-disable-next-line
   const [defaultOptions, setDefaultOptions] = useState<FilterOptions>({
     shifts: "dinner",
     status: "not_confirmed",

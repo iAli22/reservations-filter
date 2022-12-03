@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { axiosInstance } from "../../api/baseUrl";
+import dataJson from "../../api/data.json";
 import { Table } from "../../components";
 import {
-  Reservation,
   FilterOptions,
+  Reservation,
   SearchOptions,
 } from "../../types/reservations";
-import dataJson from "../../api/data.json";
 
 interface TableContainerProps {
   options: FilterOptions;
@@ -28,6 +27,7 @@ const TableContainer: React.FC<TableContainerProps> = ({ options, search }) => {
   };
   useEffect(() => {
     getTableData();
+    // eslint-disable-next-line
   }, [data]);
 
   const filterData = (options: FilterOptions) => {
@@ -70,6 +70,7 @@ const TableContainer: React.FC<TableContainerProps> = ({ options, search }) => {
       setFilteredData([]);
       setIsEmpty(false);
     }
+    // eslint-disable-next-line
   }, [options]);
 
   useEffect(() => {
@@ -78,6 +79,7 @@ const TableContainer: React.FC<TableContainerProps> = ({ options, search }) => {
       setFilteredData([]);
       setIsEmpty(false);
     }
+    // eslint-disable-next-line
   }, [search]);
 
   return (
